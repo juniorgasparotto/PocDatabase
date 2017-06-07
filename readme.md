@@ -1,0 +1,1 @@
+PocDatabase é um projeto com o objetivo único de simples que tem o objetivo de simplificar a camada de acesso a dados ajudar  na criação persistir seus objetos no disco em formato "json" usando o framework "NewtonSoft.Json".
