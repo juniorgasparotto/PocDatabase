@@ -1,0 +1,1 @@
+MarkdownGenerator.exe %2 main "documentation/.generator/index.xml" "../../../" %1 --verbose error

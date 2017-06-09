@@ -1,0 +1,11 @@
+<documentation>
+  <page>
+    <languages>
+      <language name="pt-br" output="readme-pt-br.md" default="true" />
+      <language name="en-us" output="readme.md" />
+    </languages>
+    <content>
+        <include href="doc/content.md" />
+    </content>
+  </page>
+</documentation>

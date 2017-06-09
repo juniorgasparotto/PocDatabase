@@ -1,0 +1,1 @@
+markdown-generator\MarkdownGenerator.exe doc/index.xml ../ %1
