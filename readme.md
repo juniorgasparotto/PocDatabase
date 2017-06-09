@@ -7,7 +7,7 @@
 
 # PocDatabase
 
-This project is useful as a database in the form of exclusive files for Presentations or projects that are in the process of creation and still has the class structure.
+This project is useful as a database in the form of files. It's exclusive to `POCs` or projects that are in the process of creation and still has the class structure.
 
 The main objective is to speed development, avoiding the waste of change your database tables every time a class is changed.
 
@@ -21,7 +21,7 @@ Install-Package PocDatabase
 
 # How does it work?
 
-It uses the `Newtonsoft.Json` package to do the serialization and deserialização work and so that he knows the contents of the file it is necessary to create a class that represents the schema of your main classes.
+It uses the `Newtonsoft.Json` package to do the work of serializing and deserializing and for that he knows the contents of the file it is necessary to create a class that represents the schema of your main classes.
 
 The main classes (which are part of the schema) must necessarily have a field with the name `Id` and `Guid` type. This is necessary so that the methods `GetById` , `Update` and `Delete` work. Another important point is that the method `Insert` will populate this field when it is `null` .
 
@@ -77,3 +77,9 @@ public static Main(string[] args) {
     pocFile.Drop();
 }
 ```
+
+* * *
+
+<sub>This text was translated by a machine</sub>
+
+https://github.com/juniorgasparotto/MarkdownGenerator

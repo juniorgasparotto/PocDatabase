@@ -7,7 +7,7 @@
 
 # PocDatabase
 
-Esse projeto é útil como um banco de dados em forma de arquivos e exclusivo para POCs ou projetos que estão em fase de criação e ainda não tem a estrutura de classes bem definida.
+Esse projeto é útil como um banco de dados em forma de arquivos. Ele é exclusivo para `POCs` ou projetos que estão em fase de criação e ainda não tem a estrutura de classes bem definida.
 
 O objetivo principal é a velocidade no desenvolvimento, evitando o desperdicio de alterar suas tabelas de banco de dados toda vez que uma classe for alterada.
 
@@ -21,7 +21,7 @@ Install-Package PocDatabase
 
 # Como funciona?
 
-Ele utiliza o pacote `Newtonsoft.Json` para fazer o trabalho de serialização e deserialização e para que ele conheça o conteúdo do arquivo é necessário a criação de uma classe que represente o esquema de suas classes principais.
+Ele utiliza o pacote `Newtonsoft.Json` para fazer o trabalho de serialização e desserialização e para que ele conheça o conteúdo do arquivo é necessário a criação de uma classe que represente o esquema de suas classes principais.
 
 As classes principais (que fazem parte do esquema) precisam, obrigatoriamente, ter um campo com o nome `Id` e que seja do tipo `Guid`. Isso é necessário para que os métodos `GetById`, `Update` e `Delete` funcionem. Outro ponto importante é que o método `Insert` irá popular esse campo quando ele estiver `null`.
 
