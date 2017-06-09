@@ -13,6 +13,8 @@ The main objective is to speed development, avoiding the waste of change your da
 
 We recommend to use it until the maturation of classes and after this phase, migrate to a relational database or NoSQL.
 
+# Installation
+
 ```
 Install-Package PocDatabase
 ```

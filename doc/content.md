@@ -14,6 +14,8 @@ O objetivo principal é a velocidade no desenvolvimento, evitando o desperdicio 
 
 Recomendamos utiliza-lo até o amadurecimento das classes e após essa fase, migrar para um banco de dados relacional ou NoSQL.
 
+# Instalação
+
 ```
 Install-Package PocDatabase
 ```
