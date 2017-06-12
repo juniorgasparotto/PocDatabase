@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.1;net45</TargetFrameworks>
+    <Description>This project is useful as a database file and exclusive for POCs or projects that are in the process of creation and still has the class structure.</Description>
+    <Authors>Glauber Donizeti Gasparotto Junior</Authors>
+    <Company />
+    <PackageLicenseUrl>https://github.com/juniorgasparotto/PocDatabase/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>Copyright ©  2017</Copyright>
+    <PackageProjectUrl>https://github.com/juniorgasparotto/PocDatabase</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/juniorgasparotto/PocDatabase</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>embedded-database json-database</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

@@ -37,6 +37,11 @@ namespace PocDatabase
                 _schema = Activator.CreateInstance<TSchema>();
         }
 
+        public PocRepository<TSchema, T> GetRepository<T>()
+        {
+            return new PocRepository<TSchema, T>(this);
+        }
+
         public List<T> GetCollection<T>()
         {
             var property = _schema.GetType().GetProperties().Where(f => IsCollection<T>(f)).FirstOrDefault();

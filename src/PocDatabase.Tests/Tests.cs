@@ -35,7 +35,7 @@ namespace PocDatabase.Tests
 
             #region Add Customer
             pocFile = new PocFile<Schema>();
-            var repo = new PocRepository<Schema, Customer>(pocFile);
+            var repo = pocFile.GetRepository<Customer>();
             var order = new Order { Name = "My first order" };
             var user = new User() { Name = "User1" };
             var permissions = new List<Permission>();
@@ -55,10 +55,10 @@ namespace PocDatabase.Tests
 
             #region Test
             pocFile = new PocFile<Schema>();
-            var getPermission = new PocRepository<Schema, Permission>(pocFile).GetById(permiId);
-            var getCustomer = new PocRepository<Schema, Customer>(pocFile).GetById(customer.Id);
-            var allCustomer = new PocRepository<Schema, Customer>(pocFile).GetAll();
-            var allPermission = new PocRepository<Schema, Permission>(pocFile).GetAll();
+            var getPermission = pocFile.GetRepository<Permission>().GetById(permiId);
+            var getCustomer = pocFile.GetRepository<Customer>().GetById(customer.Id);
+            var allCustomer = pocFile.GetRepository<Customer>().GetAll();
+            var allPermission = pocFile.GetRepository<Permission>().GetAll();
 
             Assert.IsTrue(permission.Id == getPermission.Id);
             Assert.IsTrue(allCustomer.Count() == 1);
@@ -69,8 +69,8 @@ namespace PocDatabase.Tests
             #region Edit and delete
 
             pocFile = new PocFile<Schema>();
-            var repoPerm = new PocRepository<Schema, Permission>(pocFile);
-            var repoCust = new PocRepository<Schema, Customer>(pocFile);
+            var repoPerm = pocFile.GetRepository<Permission>();
+            var repoCust = pocFile.GetRepository<Customer>();
             getCustomer.Name = "Edited";
             getCustomer.User.Name = "User edited";
             repoCust.Update(getCustomer);
@@ -80,8 +80,8 @@ namespace PocDatabase.Tests
 
             #region Test
             pocFile = new PocFile<Schema>();
-            getCustomer = new PocRepository<Schema, Customer>(pocFile).Get(f=>f.Id == customer.Id).First();
-            allPermission = new PocRepository<Schema, Permission>(pocFile).GetAll();
+            getCustomer = pocFile.GetRepository<Customer>().Get(f=>f.Id == customer.Id).First();
+            allPermission = pocFile.GetRepository<Permission>().GetAll();
 
             Assert.IsTrue(allCustomer.Count() == 1);
             Assert.IsTrue(allPermission.Count() == 1);

@@ -6,15 +6,14 @@ using System.Reflection;
 
 namespace PocDatabase
 {
-    public class PocRepository<TUnitOfWork, TEntity>
+    public class PocRepository<TSchema, TEntity>
     {
-        private const string ID_PROPERTY_NAME = "id";
         private readonly PropertyInfo IdProperty;
 
-        private PocFile<TUnitOfWork> _pocFile;
+        private PocFile<TSchema> _pocFile;
         private List<TEntity> _objects;
 
-        public PocRepository(PocFile<TUnitOfWork> pocDb)
+        public PocRepository(PocFile<TSchema> pocDb)
         {
             this._pocFile = pocDb;
             this._objects = this._pocFile.GetCollection<TEntity>();
@@ -88,7 +87,7 @@ namespace PocDatabase
         {
             var idProperty = typeof(TEntity)
                 .GetProperties()
-                .Where(f => f.Name.ToLower() == ID_PROPERTY_NAME && f.PropertyType == typeof(Guid))
+                .Where(f => f.Name == Constanst.PropertyId && f.PropertyType == typeof(Guid))
                 .FirstOrDefault();
             return idProperty;
         }
