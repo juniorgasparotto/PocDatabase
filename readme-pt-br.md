@@ -77,3 +77,7 @@ public static Main(string[] args) {
     pocFile.Drop();
 }
 ```
+
+# Release notes
+
+https://github.com/juniorgasparotto/PocDatabase/releases

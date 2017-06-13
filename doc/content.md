@@ -91,3 +91,7 @@ public static Main(string[] args) {
     https://github.com/juniorgasparotto/MarkdownGenerator
   </language>
 </custom-translation>
+
+# Release notes
+
+https://github.com/juniorgasparotto/PocDatabase/releases

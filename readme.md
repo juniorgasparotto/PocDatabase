@@ -78,6 +78,10 @@ public static Main(string[] args) {
 }
 ```
 
+# Release notes
+
+https://github.com/juniorgasparotto/PocDatabase/releases
+
 * * *
 
 <sub>This text was translated by a machine</sub>
