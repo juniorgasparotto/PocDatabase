@@ -20,6 +20,10 @@ Recomendamos utiliza-lo até o amadurecimento das classes e após essa fase, mig
 Install-Package PocDatabase
 ```
 
+# Release notes
+
+https://github.com/juniorgasparotto/PocDatabase/releases
+
 # Como funciona?
 
 Ele utiliza o pacote `Newtonsoft.Json` para fazer o trabalho de serialização e desserialização e para que ele conheça o conteúdo do arquivo é necessário a criação de uma classe que represente o esquema de suas classes principais.
@@ -91,7 +95,3 @@ public static Main(string[] args) {
     https://github.com/juniorgasparotto/MarkdownGenerator
   </language>
 </custom-translation>
-
-# Release notes
-
-https://github.com/juniorgasparotto/PocDatabase/releases

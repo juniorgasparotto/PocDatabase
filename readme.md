@@ -19,6 +19,10 @@ We recommend to use it until the maturation of classes and after this phase, mig
 Install-Package PocDatabase
 ```
 
+# Release notes
+
+https://github.com/juniorgasparotto/PocDatabase/releases
+
 # How does it work?
 
 It uses the `Newtonsoft.Json` package to do the work of serializing and deserializing and for that he knows the contents of the file it is necessary to create a class that represents the schema of your main classes.
@@ -77,10 +81,6 @@ public static Main(string[] args) {
     pocFile.Drop();
 }
 ```
-
-# Release notes
-
-https://github.com/juniorgasparotto/PocDatabase/releases
 
 * * *
 
